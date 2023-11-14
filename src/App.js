@@ -37,7 +37,7 @@ function App() {
         )}
       </header>
       <div id="footer">
-      made by <a href="http://linkedin.com/in/jsahagun01/" target="_blank">Jose Sahagun</a>
+      made by <a href="http://github.com/jsahagun91" target="_blank">Jose Sahagun</a>
       </div>
     </div>
   );
