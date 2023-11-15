@@ -28,6 +28,7 @@ button {
   font-size: 14px; /* Larger font size */
   font-weight: bold;
   background-color: lightgrey;
+  color: black;
   border-radius: 5px;
 }
 
@@ -55,7 +56,10 @@ a {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: auto; 
+  margin: auto;
+  margin: 20px; /* Add some margin around the QR code */
+  max-width: 300px; /* Maximum width for the QR code */
+  max-height: 300px; /* Maximum height for the QR code */
 }
 
 @media (min-width: 600px) {
