@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import QRCode from 'qrcode.react'
 import './App.css'
 
 function App() {
   const [inputValue, setInputValue] = useState('');
   const [qrValue, setQRValue] = useState('');
+  const [qrImage, setQrImage] = useState('');
+  const qrRef = useRef();
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
@@ -13,7 +15,15 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setQRValue(inputValue);
-  }
+  };
+
+  useEffect(() => {
+    if (qrValue) {
+      const canvas = qrRef.current.querySelector('canvas');
+      const image = canvas.toDataURL("image/png");
+      setQrImage(image);
+    }
+  }, [qrValue]);
 
   return (
     <div className='App'>
@@ -27,17 +37,23 @@ function App() {
             placeholder='Enter url'
           />
           <button type='submit'> Generate QR Code</button>
-        </form>
-        {qrValue && (
-          <div>
-            <h3> Here's your QR Code:</h3>
-            <QRCode value={qrValue} />
-
+          {qrValue && (
+          <div className="qrcode">
+            <h4> Here's your QR Code:</h4>
+            <div style={{ display: 'none' }} ref={qrRef}>
+              <QRCode value={qrValue} />
+            </div>
+          {qrValue && (
+            <div>
+              <img src={qrImage} alt="QR Code" />
+            </div>
+          )}  
           </div>
         )}
+        </form>
       </header>
       <div id="footer">
-      made by <a href="http://github.com/jsahagun91" target="_blank">Jose Sahagun</a>
+      made by <a href="http://pailabs.io">pai labs </a> | <a href="http://github.com/jsahagun91">Jose Sahagun</a> 
       </div>
     </div>
   );

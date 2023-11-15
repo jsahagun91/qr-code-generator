@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+h1, h4{
+  font-weight: 400;
+}
+
 .App-header {
   background-color: #ffa500;
   min-height: 100vh;
@@ -13,12 +17,23 @@
   color: white;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  margin: auto; 
+}
 button {
-  background-color: lightgrey;
+  padding: 15px; /* Increased padding */
+  font-size: 14px; /* Larger font size */
+  font-weight: bold;
+  background-color: white;
   border-radius: 5px;
 }
 
 input {
+  padding: 15px; /* Increased padding */
+  font-size: 14px; /* Larger font size */
   border-radius: 5px;
 }
 
@@ -34,4 +49,11 @@ input {
 
 a {
   color:white
+}
+
+.qrcode {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto; 
 }
