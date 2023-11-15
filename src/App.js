@@ -27,8 +27,9 @@ function App() {
 
   return (
     <div className='App'>
+      <h1> QR Code Generator </h1>
       <header className='App-header'>
-        <h1> QR Code Generator </h1>
+        {/* <h1> QR Code Generator </h1> */}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
