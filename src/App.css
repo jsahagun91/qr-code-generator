@@ -27,7 +27,7 @@ button {
   padding: 15px; /* Increased padding */
   font-size: 14px; /* Larger font size */
   font-weight: bold;
-  background-color: white;
+  background-color: lightgrey;
   border-radius: 5px;
 }
 
@@ -56,4 +56,10 @@ a {
   display: flex;
   flex-direction: column;
   margin: auto; 
+}
+
+@media (min-width: 600px) {
+  input, button, .qrcode {
+    width: auto; /* Reset width for larger screens */
+  }
 }
