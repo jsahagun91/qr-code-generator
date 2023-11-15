@@ -72,17 +72,7 @@ a {
 }
 
 .qrIMG {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin: 20px; /* Add some margin around the QR code */
-  max-width: 100px; /* Maximum width for the QR code */
-  max-height: 100px; /* Maximum height for the QR code */
+  max-width: 200px; /* Ensures the image is responsive and fits its container */
+  height: auto; 
 }
 
-@media (min-width: 600px) {
-  input, button, .qrcode {
-    width: auto; /* Reset width for larger screens */
-  }
-}

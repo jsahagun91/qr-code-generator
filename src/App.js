@@ -45,8 +45,8 @@ function App() {
               <QRCode value={qrValue} />
             </div>
           {qrValue && (
-            <div className='qrIMG'>
-              <img src={qrImage} alt="QR Code" />
+            <div>
+              <img className='qrIMG' src={qrImage} alt="QR Code" />
             </div>
           )}  
           </div>
