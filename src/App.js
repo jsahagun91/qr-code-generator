@@ -54,7 +54,7 @@ function App() {
         </form>
       </header>
       <div id="footer">
-      made with 🧡 by <a href="http://pailabs.io">pai labs </a> | <a href="http://github.com/jsahagun91">Jose Sahagun</a> 
+      made with 🧡 by <a href="http://pailabs.io">pai labs </a> | <a href="https://www.jsahagun.io">Jose Sahagun</a> 
       </div>
     </div>
   );
